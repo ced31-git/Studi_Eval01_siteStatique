@@ -1,0 +1,147 @@
+/*-------- Reset CSS ---------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*------ Global CSS ----------------*/
+li {
+  list-style: none;
+}
+
+header {
+  width: 100vw;
+}
+/*------------ CSS ----------------*/
+/*____________ HEADER _____________*/
+/*=============== Navbar ==========*/
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  background: rgba(255, 255, 255, 0.58);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  z-index: 100;
+}
+
+/************* Logo **************/
+.container-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.img-logo {
+  width: 60px;
+}
+
+.name-logo {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgb(5, 60, 5);
+  cursor: default;
+}
+
+/******** Mobile Menu Navbar *******/
+.menu {
+  height: 100%;
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-mobile-menu {
+  cursor: pointer;
+}
+
+#menu-check {
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.btn-mobile {
+  width: 40px;
+}
+.container-menu-navbar {
+  display: none;
+}
+
+.nav-link {
+  color: rgb(5, 60, 5);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  font-weight: bold;
+  color: rgb(4, 106, 48);
+  font-size: 2rem;
+  cursor: default;
+}
+/*:::::: Gestion Mobile Menu ::::::*/
+
+#menu-check:checked ~ .container-menu-navbar {
+  display: block;
+}
+
+.menu-navbar {
+  position: absolute;
+  left: 0;
+  top: 10vh;
+  width: 100vw;
+  height: 90vh;
+  background: rgba(255, 255, 255, 0.58);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*____________ MAIN ______________*/
+/*========== First section =======*/
+.firstSection {
+  z-index: 50;
+  background-image: url(./assets/bg-header.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+}
+/*____________ FOOTER ____________*/
+
+/*--------- Responsive CSS -------*/
+@media screen and (min-width: 768px) {
+  /*____________ HEADER _____________*/
+  /*=============== Navbar ==========*/
+
+  .btn-mobile-menu {
+    display: none;
+  }
+  .menu-navbar {
+    position: static;
+    flex-direction: row;
+    height: 100%;
+    width: 60vw;
+    justify-content: end;
+    background: transparent;
+  }
+  .nav-link {
+    font-size: 1rem;
+    margin-right: 50px;
+  }
+
+  #menu-check ~ .container-menu-navbar {
+    display: flex;
+  }
+}
