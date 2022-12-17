@@ -114,9 +114,161 @@ header {
   z-index: 50;
   background-image: url(./assets/bg-header.jpg);
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   background-size: cover;
   background-position: top;
+}
+
+.firstSectionabsolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 45vh;
+  margin: 10vh auto 0 0;
+  color: whitesmoke;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 0.5fr;
+  grid-template-rows: 1fr 0.5fr 1fr 0.5fr;
+  grid-template-areas:
+    ". h1-firstsection ."
+    ". line-firstsection ."
+    ". p-firstsection ."
+    ". a-firstsection .";
+  justify-content: start;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.titleh1 {
+  grid-area: h1-firstsection;
+  font-size: 2.5rem;
+  justify-self: center;
+  align-self: end;
+}
+.line-firstSection {
+  grid-area: line-firstsection;
+  width: 50vw;
+  height: 15px;
+  background: rgb(4, 106, 48);
+  border-radius: 50px;
+  justify-self: center;
+  align-self: center;
+}
+.text-firstSection {
+  grid-area: p-firstsection;
+  justify-self: start;
+  align-self: center;
+  font-size: 1.2rem;
+}
+.btn-firtSection {
+  grid-area: a-firstsection;
+  justify-self: end;
+  align-self: center;
+  color: whitesmoke;
+  text-decoration: none;
+  background: rgb(4, 106, 48);
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px whitesmoke;
+}
+.btn-firtSection:hover {
+  color: rgb(5, 60, 5);
+  background: whitesmoke;
+  box-shadow: inset 3px 3px rgb(4, 106, 48);
+}
+
+/*==========Second Section ============*/
+.secondSection {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titleh2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(4, 106, 48);
+  margin: 25px auto;
+}
+.line-secondSection {
+  width: 50vw;
+  height: 15px;
+  background: rgb(4, 106, 48);
+  border-radius: 50px;
+}
+/*-------- Cards ---------------*/
+.container-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.card {
+  width: 80vw;
+  height: 80vh;
+  margin-top: 15px;
+  border: 3px solid rgb(5, 60, 5);
+  display: grid; 
+  grid-template-columns: 0.25fr 1fr 0.25fr; 
+  grid-template-rows: 1fr 0.5fr 0.5fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "img img img"
+    ". titleh3 ."
+    ". line-secondSection ."
+    ". desc-card-secondSection ."
+    ". btn-card-secondSection .";
+  border-radius: 50px;
+  background: rgba(4, 106, 48, 0.1);
+}
+.img-card {
+  grid-area: img;
+  width: 100%;
+  border-radius: 50px 50px 0 0px;
+}
+.titleh3 {
+  grid-area: titleh3;
+  color: rgb(4, 106, 48);
+  justify-self: center;
+  align-self: end;
+  font-size: 1.5rem;
+}
+.line-card-secondSection {
+  grid-area: line-secondSection;
+  justify-self: stretch;
+  align-self: center;
+  width: 100%;
+  height: 10px;
+  background: rgb(4, 106, 48);
+  border-radius: 30px;
+}
+.container-p-card-secondSection {
+  grid-area: desc-card-secondSection;
+  justify-self: start;
+  align-self: start;
+
+}
+
+.btn-secondSection {
+  justify-self: end; 
+  align-self: center; 
+  grid-area: btn-card-secondSection;
+  padding: 10px 20px;
+  background: rgb(4, 106, 48);
+  border-radius: 30px;
+  color: whitesmoke;
+  text-decoration: none;
+  box-shadow: 5px 5px 10px black;
+}
+.btn-secondSection:hover {
+  background: rgba(4, 106, 48, 0.1);
+  color: rgb(4, 106, 48);
+  box-shadow: inset 2px 2px black;
 }
 /*____________ FOOTER ____________*/
 
@@ -141,7 +293,32 @@ header {
     margin-right: 50px;
   }
 
+  .active {
+    font-size: 1.2rem;
+    cursor: default;
+  }
+
+  .nav-link:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 1.2rem;
+  }
   #menu-check ~ .container-menu-navbar {
     display: flex;
+  }
+  /*__________ MAIN _____________________*/
+  /*======== first section ==============*/
+  .firstSection {
+    height: 60vh;
+  }
+
+  /*======== second section ============*/
+  .container-card {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .card {
+    width: 40vw;
   }
 }
