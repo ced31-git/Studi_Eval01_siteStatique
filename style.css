@@ -11,15 +11,20 @@ li {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 /*------------ CSS ----------------*/
 /*____________ HEADER _____________*/
 /*=============== Navbar ==========*/
 .navbar {
-  width: 100vw;
+  width: 100%;
   height: 10vh;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.9);
   position: absolute;
   top: 0;
   left: 0;
@@ -101,7 +106,7 @@ header {
   top: 10vh;
   width: 100vw;
   height: 90vh;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -113,10 +118,11 @@ header {
 .firstSection {
   z-index: 50;
   background-image: url(./assets/bg-header.jpg);
-  width: 100vw;
   height: 70vh;
   background-size: cover;
   background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .firstSectionabsolute {
@@ -181,97 +187,174 @@ header {
 
 /*==========Second Section ============*/
 .secondSection {
+  overflow-x: hidden;
   width: 100vw;
+  background: rgba(4, 106, 48, 0.1);
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-.titleh2 {
-  font-size: 2rem;
-  font-weight: bold;
+.titleh2-secondSection {
+  font-size: 1.5rem;
   color: rgb(4, 106, 48);
-  margin: 25px auto;
+  padding-bottom: 40px;
 }
 .line-secondSection {
-  width: 50vw;
-  height: 15px;
-  background: rgb(4, 106, 48);
-  border-radius: 50px;
+  width: 40%;
+  height: 10px;
+  background: rgb(1, 106, 48);
+  border-radius: 20px;
 }
-/*-------- Cards ---------------*/
-.container-card {
+.container-card-secondSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  align-items: center;
+}
+.card {
+  height: 50vh;
+  width: 60vw;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr 0.25fr 1.5fr 0.5fr;
+  grid-template-areas:
+    "img-card"
+    "h3-card"
+    "line-card"
+    "desc-card"
+    "btn-card";
+}
+.space-card-secondSection {
+  margin-top: 20px;
+}
+.img-card {
+  grid-area: img-card;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+.titleh3-card-secondSection {
+  grid-area: h3-card;
+  width: 100%;
+  text-align: center;
+  align-self: end;
+  font-size: 1.5rem;
+  color: rgb(4, 106, 48);
+}
+.line-card-secondSection {
+  grid-area: line-card;
+  background: rgb(1, 106, 48);
+  height: 5px;
+  width: 60%;
+  justify-self: center;
+  align-self: start;
+  border-radius: 10px;
+}
+.desc-card-secondSection {
+  grid-area: desc-card;
+  width: 80%;
+  height: 100%;
+  justify-self: center;
+}
+.btn-card-secondSection {
+  grid-area: btn-card;
+  justify-self: end;
+  align-self: start;
+  margin-right: 30px;
+  padding: 10px 20px;
+  background: rgb(4, 106, 48);
+  border-radius: 20px;
+  color: whitesmoke;
+  text-decoration: none;
+  box-shadow: 3px 3px 2px black;
+}
+.btn-card-secondSection:hover {
+  box-shadow: inset 3px 3px black;
+  background: rgb(2, 74, 33);
+}
+
+/*========= third section -> parallax effect =====*/
+.parallax-thirdSection {
+  background-image: url(./assets/img01.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 30vh;
+}
+/*======= fourth section -> gallery ============*/
+.fourthSection {
+  width: 100vw;
+}
+.container-info-gallery-fourthSection {
+  width: 80vw;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
 }
-
-.card {
-  width: 80vw;
-  height: 80vh;
-  margin-top: 15px;
-  border: 3px solid rgb(5, 60, 5);
-  display: grid; 
-  grid-template-columns: 0.25fr 1fr 0.25fr; 
-  grid-template-rows: 1fr 0.5fr 0.5fr 1fr 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "img img img"
-    ". titleh3 ."
-    ". line-secondSection ."
-    ". desc-card-secondSection ."
-    ". btn-card-secondSection .";
-  border-radius: 50px;
-  background: rgba(4, 106, 48, 0.1);
-}
-.img-card {
-  grid-area: img;
-  width: 100%;
-  border-radius: 50px 50px 0 0px;
-}
-.titleh3 {
-  grid-area: titleh3;
-  color: rgb(4, 106, 48);
-  justify-self: center;
-  align-self: end;
+.titleh3-fourthSection{
   font-size: 1.5rem;
+  color: rgb(4, 106, 48);
 }
-.line-card-secondSection {
-  grid-area: line-secondSection;
-  justify-self: stretch;
-  align-self: center;
-  width: 100%;
+.line-fourthSection {
+  width: 40%;
   height: 10px;
-  background: rgb(4, 106, 48);
-  border-radius: 30px;
+  background: rgb(4,106,48);
+  border-radius: 10px;
+  margin: 20px 0;
 }
-.container-p-card-secondSection {
-  grid-area: desc-card-secondSection;
-  justify-self: start;
-  align-self: start;
-
+.desc-fourthSection {
+  width: 70%;
+  font-size: 1.1rem;
 }
-
-.btn-secondSection {
-  justify-self: end; 
-  align-self: center; 
-  grid-area: btn-card-secondSection;
+.btn-fourthSection {
+  margin-top: 20px;
   padding: 10px 20px;
-  background: rgb(4, 106, 48);
+  background: rgb(4,106,48);
   border-radius: 30px;
   color: whitesmoke;
   text-decoration: none;
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 3px 3px 3px black;
 }
-.btn-secondSection:hover {
-  background: rgba(4, 106, 48, 0.1);
-  color: rgb(4, 106, 48);
-  box-shadow: inset 2px 2px black;
+.btn-fourthSection:hover {
+  box-shadow: inset 3px 3px black;
+  background: rgb(2, 74, 33);
+}
+.container-img-gallery-fourthSection{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+.img-gallery {
+  width: 40%;
+  margin: 2%;
 }
 /*____________ FOOTER ____________*/
-
+.footer-class {
+  width: 100vw;
+  height: 10vh;
+  background: rgba(4,106,48,0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+.footer-class > a, .footer-class > p {
+  text-decoration: none;
+  color: rgb(3, 54, 25);
+  font-weight: bold;
+}
 /*--------- Responsive CSS -------*/
 @media screen and (min-width: 768px) {
   /*____________ HEADER _____________*/
@@ -312,13 +395,34 @@ header {
   .firstSection {
     height: 60vh;
   }
+  .line-firstSection {
+    width: 30vw;
+  }
 
   /*======== second section ============*/
-  .container-card {
+  .container-card-secondSection {
     flex-direction: row;
     justify-content: space-evenly;
   }
   .card {
+    width: 40%;
+    height: 70vh;
+    width: 40vw;
+  }
+  .space-card-secondSection {
+    margin: 0;
+  }
+  /*=========== fourth section ========*/
+  .fourthSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-info-gallery-fourthSection{
+    width: 40vw;
+    align-items: end;
+  }
+  .container-img-gallery-fourthSection {
     width: 40vw;
   }
 }
