@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <!-- Configuration de la fenêtre d'affichage pour que votre site Web ait une belle apparence sur tous les appareils -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Description pour recherche via un navigateur web -->
+    <meta
+      name="description"
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in nibh pellentesque ligula ornare imperdiet sit amet eget augue. Sed eu erat a eros ac."
+    />
+    <!-- Tab title -->
+    <title>Lorem Association</title>
+    <!-- Tab picture -->
+    <link rel="icon" href="./assets/logo.png" type="image/png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <!-- Left section-->
+        <div class="container-logo">
+          <img
+            src="../assets/logo.png"
+            alt="Logo de l'association"
+            class="img-logo"
+          />
+          <p class="name-logo">Lorem</p>
+        </div>
+        <!-- right section and btn+mobile menu-->
+        <div class="menu">
+          <label for="menu-check" class="btn-mobile-menu">
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 283.426 283.426"
+              style="enable-background: new 0 0 283.426 283.426"
+              xml:space="preserve"
+              class="btn-mobile"
+            >
+              <g>
+                <rect
+                  x="0"
+                  y="40.84"
+                  style="fill: rgb(5, 60, 5)"
+                  width="283.426"
+                  height="47.735"
+                />
+                <rect
+                  x="0"
+                  y="117.282"
+                  style="fill: rgb(5, 60, 5)"
+                  width="283.426"
+                  height="47.735"
+                />
+                <rect
+                  x="0"
+                  y="194.851"
+                  style="fill: rgb(5, 60, 5)"
+                  width="283.426"
+                  height="47.735"
+                />
+              </g>
+            </svg>
+          </label>
+          <input type="checkbox" id="menu-check" />
+          <div class="container-menu-navbar">
+            <menu class="menu-navbar">
+              <li class="menu-nav-link">
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+              <li class="menu-nav-link">
+                <a href="#" class="nav-link active">Events</a>
+              </li>
+              <li class="menu-nav-link">
+                <a href="#" class="nav-link">Lorem</a>
+              </li>
+              <li class="menu-nav-link">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </menu>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-events">
+      <div class="tab-container">
+        <h1 class="h1-event">Events</h1>
+        <div class="line-event"></div>
+        <div class="tab-content">
+            <input type="radio" name="tab-event" id="tab-1" checked>
+            <label for="tab-1" id="tab-1-event">Téléthon 2022</label>
+            <input type="radio" name="tab-event" id="tab-2">
+            <label for="tab-2" id="tab-2-event">Randonnées avec un handicap moteur</label>
+            <article id="tab-event-01" class="tab-item">
+                <img 
+                src="../assets/afficheTelethon2022.png" 
+                alt="Affiche téléthon 2022"
+                class="img-tab">
+                <h2 class="h2-art">Téléthon 2022</h2>
+                <p class="p-g">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam accusamus aspernatur illo, temporibus aliquid eligendi perferendis, voluptate animi nisi minus rem iste quae. Molestiae odit hic alias harum optio minima.</p>
+                <div class="p-pair">
+                    <img src="../assets/img_articles_telethon/parrain.jpg" alt="Parrain du téléthon 2022: Kev Adams" class="img-art-tab">
+                    <p class="p-g">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia delectus rerum suscipit! Deleniti, consequatur ullam numquam, nobis, mollitia commodi accusantium a ea necessitatibus beatae cupiditate.</p>
+                    <p class="p-g">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, deleniti nostrum id aut possimus consequatur ducimus nulla quaerat error ab ratione repellendus, minima a. Accusantium eveniet natus omnis ex obcaecati est nulla explicabo, fuga, cupiditate eligendi facere minima similique asperiores!</p>
+                </div>
+                <div class="p-impair">
+                    <img src="../assets/img_articles_telethon/lucie-telethon2022.jpg.jpg" alt="Photo d'une interview de la maman de lucie avec Kev Adams" class="img-art-tab">
+                    <p class="p-g">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus corrupti voluptatem quae debitis. Ab dignissimos neque odit molestiae error rem omnis voluptatum reprehenderit qui excepturi, doloribus saepe. Quia soluta, veritatis, sequi qui odit et iure, rem magnam animi quod nam?</p>
+                </div>
+                
+                <div class="p-pair">
+                    <img src="../assets/img_articles_telethon/plateau-final-telethon2022.jpg.jpg" alt="Plateau final àprès 30heures, 78051091 € de promesses de dons" class="img-art-tab">
+                    <p class="p-g">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia delectus rerum suscipit! Deleniti, consequatur ullam numquam, nobis, mollitia commodi accusantium a ea necessitatibus beatae cupiditate.</p>
+                </div>
+
+            </article>
+            <article id="tab-event-02" class="tab-item">
+                <img 
+                src="../assets/randonneehandicap.jpg" 
+                alt="Affiche randonnée handicap"
+                class="img-tab">
+            </article>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-class">
+      <a href="#">Plan de site</a>
+      <p>-</p>
+      <p>©2022 - Lorem Association</p>
+      <p>-</p>
+      <a href="#">Mentions Légales</a>
+    </footer>
+  </body>
+</html>
