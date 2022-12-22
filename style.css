@@ -518,4 +518,19 @@ body {
   .main-events{
     height: 280vh;
   }
+  .p-impair, .p-pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .p-impair {
+    flex-direction: row-reverse;
+  }
+  .img-art-tab {
+    width: 30vw;
+    margin: 2vh;
+  }
+  .tab-item {
+    width: 90vw;
+  }
 }
